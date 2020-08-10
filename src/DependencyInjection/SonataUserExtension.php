@@ -178,7 +178,7 @@ class SonataUserExtension extends Extension implements PrependExtensionInterface
         }
 
         $container->setParameter('sonata.user.google.authenticator.forced_for_role', $config['google_authenticator']['forced_for_role']);
-        $container->setParameter('sonata.user.google.authenticator.ip_white_list', $config['google_authenticator']['ip_white_list']);
+        $container->setParameter('sonata.user.google.authenticator.trusted_ip_list', $config['google_authenticator']['trusted_ip_list']);
 
         $container->getDefinition('sonata.user.google.authenticator.provider')
             ->replaceArgument(0, $config['google_authenticator']['server']);
